@@ -1,0 +1,82 @@
+{
+  "personal-details": [
+    {
+      "type": "text",
+      "key": "firstName",
+      "label": "First name:",
+
+      "order": 1
+    },
+    {
+      "type": "text",
+      "key": "lastName",
+      "label": "Last name:",
+
+      "order": 2
+    },
+    {
+      "type": "number",
+      "key": "age",
+      "label": "Age:",
+
+      "order": 3
+    },
+    {
+      "type": "textarea",
+      "key": "comments",
+      "label": "Comments:",
+
+      "order": 4
+    },
+    {
+      "type": "checkbox",
+      "key": "terms",
+      "label": "Accepts terms and conditions",
+
+      "value": false,
+      "order": 5
+    }
+  ],
+  "address": [
+    {
+      "type": "text",
+      "key": "addressLine1",
+      "label": "Address line 1:",
+
+      "order": 1
+    },
+    {
+      "type": "text",
+      "key": "addressLine2",
+      "label": "Address line 2:",
+
+      "order": 2
+    },
+    {
+      "type": "text",
+      "key": "city",
+      "label": "City:",
+
+      "order": 3
+    },
+    {
+      "type": "dropdown",
+      "key": "country",
+      "label": "Country:",
+      "options": [
+        { "key": "peru", "value": "Peru" },
+        { "key": "chile", "value": "Chile" },
+        { "key": "argentina", "value": "Argentina" },
+        { "key": "colombia", "value": "Colombia" }
+      ],
+      "order": 4
+    },
+    {
+      "type": "text",
+      "key": "zip",
+      "label": "ZIP:",
+
+      "order": 5
+    }
+  ]
+}

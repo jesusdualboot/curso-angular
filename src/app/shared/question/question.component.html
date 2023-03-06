@@ -1,0 +1,55 @@
+<div [formGroup]="form">
+  <label [attr.for]="question.key">{{ question.label }}</label>
+
+  <div [ngSwitch]="question.type">
+    <input
+      *ngSwitchCase="'checkbox'"
+      class="shadow appearance-none border rounded py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      [formControlName]="question.key"
+      [id]="question.key"
+      [value]="question.value"
+      [type]="question.type"
+    />
+
+    <input
+      *ngSwitchCase="'number'"
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      [formControlName]="question.key"
+      [id]="question.key"
+      [type]="question.type"
+    />
+
+    <input
+      *ngSwitchCase="'text'"
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      [formControlName]="question.key"
+      [id]="question.key"
+      [type]="question.type"
+    />
+
+    <textarea
+      *ngSwitchCase="'textarea'"
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      [formControlName]="question.key"
+      [id]="question.key"
+      cols="30"
+      rows="10"
+    ></textarea>
+
+    <select
+      [id]="question.key"
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      *ngSwitchCase="'dropdown'"
+      [formControlName]="question.key"
+      [value]="question.options[0]"
+    >
+      <option *ngFor="let opt of question.options" [value]="opt.key">
+        {{ opt.value }}
+      </option>
+    </select>
+  </div>
+
+  <div class="errorMessage" *ngIf="!isValid">
+    {{ question.label }} is required
+  </div>
+</div>

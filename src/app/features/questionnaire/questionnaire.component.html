@@ -1,0 +1,45 @@
+<div class="h-[calc(100vh-120px)]">
+  <div class="flex w-full h-full justify-center">
+    <div class="grid grid-cols-2 gap-12">
+      <form
+        [formGroup]="formPersonal"
+        class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+      >
+        <p class="text-4xl text-center mb-5 italic font-bold">
+          Personal Details
+        </p>
+        <div *ngFor="let question of personalDetails" class="form-row">
+          <app-question
+            [question]="question"
+            [form]="formPersonal"
+          ></app-question>
+        </div>
+        <div class="flex my-5 justify-center">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="button"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+      <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <p class="text-4xl text-center mb-5 italic font-bold">Address</p>
+        <div *ngFor="let question of address" class="form-row">
+          <app-question
+            [question]="question"
+            [form]="formAddress"
+          ></app-question>
+        </div>
+        <div class="flex my-5 justify-center">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="button"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

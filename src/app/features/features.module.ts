@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
+import { QuestionControlService } from './questionnaire/question-control.service';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     SignUpComponent,
     HomeComponent,
     ProfileComponent,
+    QuestionnaireComponent,
   ],
+  providers: [QuestionControlService],
   imports: [CommonModule, SharedModule, ReactiveFormsModule],
 })
 export class FeaturesModule {}
