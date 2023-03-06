@@ -5,6 +5,9 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { PostCardComponent } from './post-card/post-card.component';
 import { QuoteCardComponent } from './quote-card/quote-card.component';
 import { BaseCardComponent } from './base-card/base-card.component';
+import { QuestionComponent } from './question/question.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +16,8 @@ import { BaseCardComponent } from './base-card/base-card.component';
     PostCardComponent,
     QuoteCardComponent,
     BaseCardComponent,
+    QuestionComponent,
+    DynamicFormComponent,
   ],
   exports: [
     GreetingPipe,
@@ -20,7 +25,8 @@ import { BaseCardComponent } from './base-card/base-card.component';
     QuoteCardComponent,
     ProductCardComponent,
     BaseCardComponent,
+    QuestionComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
 })
 export class SharedModule {}

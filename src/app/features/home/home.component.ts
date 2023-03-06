@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HomeService } from 'src/app/core/home.service';
+import { HomeService } from 'src/app/features/home/home.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +7,7 @@ import { HomeService } from 'src/app/core/home.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  private service = new HomeService();
+  constructor(private service: HomeService) {}
   items = this.service.getItems();
   // info = {
   //   title: 'Money plant',

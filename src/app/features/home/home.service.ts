@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CardItem } from '../shared/card-item';
+import { CardItem } from '../../shared/card-item';
 
 @Injectable()
 export class HomeService {
