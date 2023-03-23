@@ -4,7 +4,7 @@
   <div [ngSwitch]="question.type">
     <input
       *ngSwitchCase="'checkbox'"
-      class="shadow appearance-none border rounded py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      class="shadow border rounded py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       [formControlName]="question.key"
       [id]="question.key"
       [value]="question.value"
@@ -13,7 +13,7 @@
 
     <input
       *ngSwitchCase="'number'"
-      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       [formControlName]="question.key"
       [id]="question.key"
       [type]="question.type"
@@ -21,7 +21,7 @@
 
     <input
       *ngSwitchCase="'text'"
-      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       [formControlName]="question.key"
       [id]="question.key"
       [type]="question.type"
@@ -29,7 +29,7 @@
 
     <textarea
       *ngSwitchCase="'textarea'"
-      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       [formControlName]="question.key"
       [id]="question.key"
       cols="30"
@@ -38,7 +38,7 @@
 
     <select
       [id]="question.key"
-      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       *ngSwitchCase="'dropdown'"
       [formControlName]="question.key"
       [value]="question.options[0]"

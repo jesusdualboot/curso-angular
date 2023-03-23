@@ -7,8 +7,8 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/auth.service';
-import { matchValidator } from 'src/app/core/matchValidator.directive';
-import { passwordValidator } from 'src/app/core/passwordValidator.directive';
+import { matchValidator } from 'src/app/shared/validators/matchValidator.directive';
+import { passwordValidator } from 'src/app/shared/validators/passwordValidator.directive';
 
 @Component({
   selector: 'app-sign-up',
@@ -29,7 +29,7 @@ export class SignUpComponent {
         '',
         [Validators.required, Validators.minLength(6), passwordValidator()],
       ],
-      cPassword: ['', [matchValidator('password', false)]],
+      cPassword: ['', [Validators.required, matchValidator('password')]],
     });
   }
 

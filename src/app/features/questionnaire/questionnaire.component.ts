@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { QuestionBase } from 'src/app/shared/models/question-base';
-import json from '../../shared/data/form-inputs.json';
+import json from 'src/assets/data/form-inputs.json';
 import { QuestionControlService } from './question-control.service';
 
 @Component({
@@ -18,7 +18,7 @@ export class QuestionnaireComponent implements OnInit {
 
   constructor(private qcs: QuestionControlService) {
     this.personalDetails = json['personal-details'] as QuestionBase<string>[];
-    this.address = json['address'] as unknown as QuestionBase<string>[];
+    this.address = json['address'] as QuestionBase<string>[];
   }
 
   ngOnInit(): void {

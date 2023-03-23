@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CardData } from '../interfaces/main.data';
+import { CardData } from '../../interfaces/main.data';
 
 @Component({
   selector: 'app-post-card',
