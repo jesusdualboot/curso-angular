@@ -1,7 +1,18 @@
+import { ProductCardComponent } from '../card-templates/product-card/product-card.component';
+
 interface UserData {
   name: string;
   email?: string;
   password: string;
 }
 
-export default UserData;
+interface CardData {
+  title?: string;
+  publishedDate?: Date;
+  image?: string;
+  price?: number;
+  author?: string;
+  description?: string;
+}
+
+export { UserData, CardData };

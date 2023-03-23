@@ -1,67 +1,81 @@
-<div class="flex w-full h-full justify-center">
-  <div class="flex items-center max-w-lg">
-    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-      <p class="text-4xl text-center mb-5 italic font-bold">Sign Up</p>
-      <div class="mb-4">
-        <label
-          class="block text-gray-700 text-xl font-bold mb-2"
-          for="username"
-        >
-          Name
-        </label>
-        <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="username"
-          type="text"
-          placeholder="Username"
-          [formControl]="name"
-        />
-      </div>
-      <div class="mb-4">
-        <label
-          class="block text-gray-700 text-xl font-bold mb-2"
-          for="username"
-        >
-          Email
-        </label>
-        <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="username"
-          type="email"
-          placeholder="Email"
-          [formControl]="email"
-        />
-      </div>
-      <div class="mb-6">
-        <label
-          class="block text-gray-700 text-xl font-bold mb-2"
-          for="password"
-        >
-          Password
-        </label>
-        <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-          id="password"
-          type="password"
-          placeholder="******************"
-          [formControl]="password"
-        />
-      </div>
-      <div class="flex flex-col gap-5 items-center justify-between">
-        <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          type="button"
-          (click)="submit()"
-        >
-          Submit
-        </button>
-        <a
-          class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-          (click)="navigate('sign-in')"
-        >
-          Sign In
-        </a>
-      </div>
-    </form>
+<div class="h-[calc(100vh-120px)]">
+  <div class="flex w-full h-full justify-center">
+    <div class="flex items-center max-w-lg">
+      <form
+        action=""
+        [formGroup]="fg"
+        class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+      >
+        <p class="text-4xl text-center mb-5 italic font-bold">Sign Up</p>
+        <div class="container">
+          <div class="mb-5">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              placeholder=""
+              formControlName="name"
+              class="block w-50 h-full px-3 py-2 border"
+            />
+            <p class="text-red-500 text-xs" *ngIf="nameRequired">
+              Name is required
+            </p>
+          </div>
+          <div class="mb-5">
+            <label for="name">Email</label>
+            <input
+              type="email"
+              placeholder=""
+              formControlName="email"
+              class="block w-50 h-full px-3 py-2 border"
+            />
+            <p class="text-red-500 text-xs" *ngIf="emailRequired">
+              Email is required
+            </p>
+          </div>
+          <div class="mb-5">
+            <label for="name">Password</label>
+            <input
+              type="password"
+              placeholder=""
+              formControlName="password"
+              class="block w-50 h-full px-3 py-2 border"
+            />
+            <p class="text-red-500 text-xs" *ngIf="passwordRequired">
+              Password should be at 6 characters. Password must have at least
+              one number, one lowercase and one uppercase letter
+            </p>
+          </div>
+          <div class="mb-5">
+            <label for="name">Confirm Password</label>
+            <input
+              type="password"
+              placeholder=""
+              formControlName="cPassword"
+              class="block w-50 h-full px-3 py-2 border"
+            />
+            <p *ngIf="cPassword">Password mismatch</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5 items-center justify-between">
+          <button
+            [ngClass]="
+              (!fg.valid ? 'bg-blue-200' : 'bg-blue-500 hover:bg-blue-700') +
+              ' text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+            "
+            type="button"
+            (click)="onSubmit()"
+            [disabled]="!fg.valid"
+          >
+            Submit
+          </button>
+          <a
+            class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+            (click)="navigate('sign-in')"
+          >
+            Sign In
+          </a>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
