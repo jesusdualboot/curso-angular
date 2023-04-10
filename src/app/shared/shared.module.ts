@@ -5,6 +5,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { PostCardComponent } from './post-card/post-card.component';
 import { QuoteCardComponent } from './quote-card/quote-card.component';
 import { BaseCardComponent } from './base-card/base-card.component';
+import { CardLoadingComponent } from './card-loading/card-loading.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { BaseCardComponent } from './base-card/base-card.component';
     PostCardComponent,
     QuoteCardComponent,
     BaseCardComponent,
+    CardLoadingComponent,
   ],
   exports: [
     GreetingPipe,
