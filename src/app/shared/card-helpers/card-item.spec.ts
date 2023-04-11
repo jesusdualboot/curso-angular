@@ -1,4 +1,4 @@
-import { CardItem } from './card-item';
+import { CardItem } from './card-helpers/card-item';
 
 // describe('CardItem', () => {
 //   it('should create an instance', () => {

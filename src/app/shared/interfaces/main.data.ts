@@ -1,4 +1,4 @@
-import { ProductCardComponent } from '../product-card/product-card.component';
+import { ProductCardComponent } from '../card-templates/product-card/product-card.component';
 
 interface UserData {
   name: string;

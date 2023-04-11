@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GreetingPipe } from './greeting.pipe';
-import { ProductCardComponent } from './product-card/product-card.component';
-import { PostCardComponent } from './post-card/post-card.component';
-import { QuoteCardComponent } from './quote-card/quote-card.component';
-import { BaseCardComponent } from './base-card/base-card.component';
+import { ProductCardComponent } from './card-templates/product-card/product-card.component';
+import { PostCardComponent } from './card-templates/post-card/post-card.component';
+import { QuoteCardComponent } from './card-templates/quote-card/quote-card.component';
 import { CardLoadingComponent } from './card-loading/card-loading.component';
+import { CardDirective } from './card-helpers/card.directive';
 
 @NgModule({
   declarations: [
@@ -13,15 +13,15 @@ import { CardLoadingComponent } from './card-loading/card-loading.component';
     ProductCardComponent,
     PostCardComponent,
     QuoteCardComponent,
-    BaseCardComponent,
+    CardDirective,
     CardLoadingComponent,
   ],
   exports: [
+    CardLoadingComponent,
     GreetingPipe,
     PostCardComponent,
     QuoteCardComponent,
     ProductCardComponent,
-    BaseCardComponent,
   ],
   imports: [CommonModule],
 })

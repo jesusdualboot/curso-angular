@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { CardItem } from 'src/app/shared/card-item';
-import { PostCardComponent } from 'src/app/shared/post-card/post-card.component';
-import { ProductCardComponent } from 'src/app/shared/product-card/product-card.component';
-import { QuoteCardComponent } from 'src/app/shared/quote-card/quote-card.component';
+import { CardItem } from 'src/app/shared/card-helpers/card-item';
+import { PostCardComponent } from 'src/app/shared/card-templates/post-card/post-card.component';
+import { ProductCardComponent } from 'src/app/shared/card-templates/product-card/product-card.component';
+import { QuoteCardComponent } from 'src/app/shared/card-templates/quote-card/quote-card.component';
 
 @Injectable()
 export class HomeService {
@@ -12,8 +12,7 @@ export class HomeService {
         title: 'Money plant',
         description:
           'It is considered as a lucky plant which brings wealth, health, prosperity and happiness in the house.',
-        image:
-          'https://vkflowerbees.com/wp-content/uploads/2022/03/money-plant.jpeg',
+        image: 'https://upload.wikimedia.org/wikipedia/en/b/b5/MoneyPlant.JPG',
         price: 29,
       }),
       new CardItem(PostCardComponent, {
