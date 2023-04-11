@@ -4,4 +4,13 @@ interface UserData {
   password: string;
 }
 
-export default UserData;
+interface CardData {
+  title?: string;
+  publishedDate?: Date;
+  image?: string;
+  price?: number;
+  author?: string;
+  description?: string;
+}
+
+export { UserData, CardData };

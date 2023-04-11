@@ -6,8 +6,10 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomeService } from './home/home.service';
 
 @NgModule({
+  providers: [HomeService],
   declarations: [
     SignInComponent,
     SignUpComponent,
