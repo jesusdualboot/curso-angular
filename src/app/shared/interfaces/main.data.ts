@@ -1,5 +1,3 @@
-import { ProductCardComponent } from '../card-templates/product-card/product-card.component';
-
 interface UserData {
   name: string;
   email?: string;
